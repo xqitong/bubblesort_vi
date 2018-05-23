@@ -32,8 +32,8 @@ def bubs(lst):
             res.append(setcolor(j,j+1,lst))
     res.append(setcolor(-1,-1,lst))
     return res
-
-lst = list(range(1,10))
+N =30
+lst = list(range(1,N))
 random.shuffle(lst)
 result=bubs(lst)
 
@@ -50,6 +50,7 @@ def update(res):
         plsts.append(elenum)
         pcols.append(elecol)
     plt.cla()#清除残影
+    plt.xlim((-1, N-1))
     return plt.bar(list(range(len(plsts))),plsts,color=pcols)
     
 
